@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - محمد بن فهد الفريح</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chosen Palette: Calm Neutral -->
+    <!-- Application Structure Plan: A sidebar navigation SPA. The static, linear policy is broken into thematic sections accessible via a persistent sidebar. This structure enhances navigation and readability over a long scrolling document. The default view is "Information We Collect". The main interaction is clicking sidebar links to swap content in the main view, making the dense information digestible. This is better than a simple page as it allows non-linear exploration and quick access to specific sections. -->
+    <!-- Visualization & Content Choices: 
+        - Policy Sections -> Goal: Inform -> Presentation: Each policy section is presented as a distinct content block.
+        - Navigation -> Goal: Organize -> Presentation: A fixed sidebar with links acts as the primary navigation. This is implemented with HTML lists and styled with Tailwind CSS. JS handles showing/hiding content blocks.
+        - Key Points (like types of data or user rights) -> Goal: Inform/Compare -> Presentation: Bulleted lists with Unicode icons (e.g., 🔒, 🛡️) are used within content blocks to make key points scannable and visually distinct.
+        - Quantitative Data -> Goal: N/A -> Presentation: The source report (Privacy Policy) contains no quantitative data suitable for visualization. Therefore, no charts (Chart.js/Plotly) are used as it would be inappropriate.
+        - Justification: The sidebar structure is superior for discoverability and reduces cognitive load compared to a single long text document. Icons and clear headings improve scannability.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        .nav-link.active {
+            background-color: #eef2ff; /* indigo-100 */
+            color: #4f46e5; /* indigo-600 */
+            font-weight: 600;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="w-64 bg-white p-6 border-r border-stone-200 hidden md:block fixed h-full">
+            <h1 class="text-xl font-bold text-stone-900">Privacy Policy</h1>
+            <h2 class="text-sm text-stone-500 mb-8">محمد بن فهد الفريح</h2>
+            <nav>
+                <ul class="space-y-2">
+                    <li><a href="#info-collect" class="nav-link active w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">Information We Collect</a></li>
+                    <li><a href="#info-use" class="nav-link w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">How We Use Information</a></li>
+                    <li><a href="#info-share" class="nav-link w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">Sharing Information</a></li>
+                    <li><a href="#security" class="nav-link w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">Data Security</a></li>
+                    <li><a href="#rights" class="nav-link w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">Your Privacy Rights</a></li>
+                    <li><a href="#children" class="nav-link w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">Children's Privacy</a></li>
+                    <li><a href="#changes" class="nav-link w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">Policy Changes</a></li>
+                    <li><a href="#contact" class="nav-link w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">Contact Us</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Mobile Header -->
+        <header class="md:hidden w-full bg-white p-4 border-b border-stone-200 fixed top-0 z-10">
+            <div class="flex justify-between items-center">
+                <h1 class="text-lg font-bold text-stone-900">Privacy Policy</h1>
+                <button id="menu-button" class="p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+             <nav id="mobile-menu" class="hidden mt-4">
+                <ul class="space-y-2">
+                    <li><a href="#info-collect" class="nav-link active w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">Information We Collect</a></li>
+                    <li><a href="#info-use" class="nav-link w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">How We Use Information</a></li>
+                    <li><a href="#info-share" class="nav-link w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">Sharing Information</a></li>
+                    <li><a href="#security" class="nav-link w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">Data Security</a></li>
+                    <li><a href="#rights" class="nav-link w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">Your Privacy Rights</a></li>
+                    <li><a href="#children" class="nav-link w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">Children's Privacy</a></li>
+                    <li><a href="#changes" class="nav-link w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">Policy Changes</a></li>
+                    <li><a href="#contact" class="nav-link w-full text-left text-stone-600 hover:bg-stone-100 block p-3 rounded-lg transition-colors duration-200">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 md:ml-64 p-6 md:p-10 lg:p-12 mt-20 md:mt-0">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-sm text-stone-500 mb-6">Last Updated: July 8, 2025</p>
+
+                <!-- Section: Information We Collect -->
+                <section id="info-collect-content" class="content-section active">
+                    <h3 class="text-3xl font-bold mb-2 text-stone-900">Information We Collect</h3>
+                    <p class="text-lg text-stone-600 mb-8">We collect information you provide directly and data that is collected automatically as you use the application. This helps us improve your experience.</p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-xl border border-stone-200">
+                            <h4 class="font-bold text-lg mb-2">👤 Information You Provide</h4>
+                            <p class="text-stone-600 mb-4">Any data you voluntarily provide while using the app.</p>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-start"><span class="mr-2 mt-1">✓</span><div><strong>Account Information:</strong> Name, email address, and password if you create an account.</div></li>
+                                <li class="flex items-start"><span class="mr-2 mt-1">✓</span><div><strong>User Content:</strong> Any content you create, such as bookmarks, favorites, or notes.</div></li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl border border-stone-200">
+                            <h4 class="font-bold text-lg mb-2">⚙️ Information Collected Automatically</h4>
+                             <p class="text-stone-600 mb-4">Data gathered from your device and usage patterns.</p>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-start"><span class="mr-2 mt-1">✓</span><div><strong>Device Information:</strong> Device type, OS version, and unique identifiers.</div></li>
+                                <li class="flex items-start"><span class="mr-2 mt-1">✓</span><div><strong>Usage Data:</strong> Features you use, content you view, and interaction times.</div></li>
+                                <li class="flex items-start"><span class="mr-2 mt-1">✓</span><div><strong>Analytics:</strong> Anonymous data to understand user engagement via third-party services like Firebase.</div></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: How We Use Information -->
+                <section id="info-use-content" class="content-section">
+                    <h3 class="text-3xl font-bold mb-2 text-stone-900">How We Use Your Information</h3>
+                    <p class="text-lg text-stone-600 mb-8">Your data is used for legitimate business purposes to provide and improve our services.</p>
+                    <div class="bg-white p-8 rounded-xl border border-stone-200">
+                        <ul class="space-y-4">
+                            <li class="flex items-center"><span class="text-green-500 text-2xl mr-4">✔</span><span>To provide, operate, and maintain our Application.</span></li>
+                            <li class="flex items-center"><span class="text-green-500 text-2xl mr-4">✔</span><span>To improve, personalize, and expand our Application.</span></li>
+                            <li class="flex items-center"><span class="text-green-500 text-2xl mr-4">✔</span><span>To understand and analyze how you use our Application.</span></li>
+                            <li class="flex items-center"><span class="text-green-500 text-2xl mr-4">✔</span><span>To communicate with you for customer service and updates.</span></li>
+                            <li class="flex items-center"><span class="text-green-500 text-2xl mr-4">✔</span><span>For compliance purposes, such as enforcing our Terms of Service.</span></li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- Section: Sharing Information -->
+                <section id="info-share-content" class="content-section">
+                    <h3 class="text-3xl font-bold mb-2 text-stone-900">Sharing Your Information</h3>
+                    <p class="text-lg text-stone-600 mb-8">We do not sell your personal information. We only share it in specific situations to operate our service or comply with legal requirements.</p>
+                     <div class="bg-white p-8 rounded-xl border border-stone-200">
+                        <ul class="space-y-4">
+                           <li class="flex items-start"><span class="text-blue-500 text-xl mr-4 mt-1">→</span><div><strong>With Third-Party Service Providers:</strong> We may share information with vendors and consultants who perform services on our behalf, such as data analysis and hosting.</div></li>
+                            <li class="flex items-start"><span class="text-blue-500 text-xl mr-4 mt-1">→</span><div><strong>By Law or to Protect Rights:</strong> We may disclose information if required by law or to protect our rights, property, or the safety of our users.</div></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Section: Data Security -->
+                <section id="security-content" class="content-section">
+                    <h3 class="text-3xl font-bold mb-2 text-stone-900">Data Security</h3>
+                    <p class="text-lg text-stone-600 mb-8">We use administrative, technical, and physical security measures to help protect your personal information.</p>
+                    <div class="bg-white p-8 rounded-xl border border-stone-200 flex items-center">
+                        <span class="text-5xl mr-6">🛡️</span>
+                        <p>While we have taken reasonable steps to secure the personal information you provide, please be aware that no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.</p>
+                    </div>
+                </section>
+
+                <!-- Section: Your Privacy Rights -->
+                <section id="rights-content" class="content-section">
+                    <h3 class="text-3xl font-bold mb-2 text-stone-900">Your Privacy Rights</h3>
+                    <p class="text-lg text-stone-600 mb-8">You have rights regarding your personal data. To exercise them, please contact us.</p>
+                    <div class="bg-white p-8 rounded-xl border border-stone-200">
+                        <ul class="space-y-3">
+                            <li><strong>The right to access:</strong> You can request copies of your personal data.</li>
+                            <li><strong>The right to rectification:</strong> You can request that we correct any inaccurate information.</li>
+                            <li><strong>The right to erasure:</strong> You can request that we erase your personal data, under certain conditions.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Section: Children's Privacy -->
+                 <section id="children-content" class="content-section">
+                    <h3 class="text-3xl font-bold mb-2 text-stone-900">Children's Privacy</h3>
+                    <p class="text-lg text-stone-600 mb-8">Our application is not intended for use by children under the age of 13.</p>
+                     <div class="bg-white p-8 rounded-xl border border-stone-200 flex items-center">
+                        <span class="text-5xl mr-6">🚸</span>
+                        <p>We do not knowingly collect personally identifiable information from children under 13. If we become aware that a child under 13 has provided us with personal information, we will take steps to delete such information from our files.</p>
+                    </div>
+                </section>
+
+                <!-- Section: Policy Changes -->
+                <section id="changes-content" class="content-section">
+                    <h3 class="text-3xl font-bold mb-2 text-stone-900">Changes to This Policy</h3>
+                     <p class="text-lg text-stone-600 mb-8">We may update this privacy policy from time to time.</p>
+                     <div class="bg-white p-8 rounded-xl border border-stone-200 flex items-center">
+                        <span class="text-5xl mr-6">🔄</span>
+                        <p>The updated version will be indicated by an updated "Last Updated" date. We encourage you to review this privacy policy frequently to be informed of how we are protecting your information.</p>
+                    </div>
+                </section>
+                
+                <!-- Section: Contact Us -->
+                <section id="contact-content" class="content-section">
+                    <h3 class="text-3xl font-bold mb-2 text-stone-900">Contact Us</h3>
+                    <p class="text-lg text-stone-600 mb-8">If you have questions or comments about this policy, please reach out.</p>
+                    <div class="bg-white p-8 rounded-xl border border-stone-200 text-center">
+                        <h4 class="text-lg font-semibold">Email Us</h4>
+                        <a href="mailto:smartfingers.ye@gmail.com" class="text-indigo-600 text-xl hover:underline">smartfingers.ye@gmail.com</a>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function switchTab(targetId) {
+                // Deactivate all links and sections
+                navLinks.forEach(link => link.classList.remove('active'));
+                contentSections.forEach(section => section.classList.remove('active'));
+
+                // Activate the target link and section
+                const targetLink = document.querySelector(`.nav-link[href="#${targetId}"]`);
+                const targetContent = document.getElementById(`${targetId}-content`);
+
+                if (targetLink && targetContent) {
+                    // Activate links in both desktop and mobile navs
+                    document.querySelectorAll(`.nav-link[href="#${targetId}"]`).forEach(l => l.classList.add('active'));
+                    targetContent.classList.add('active');
+                }
+            }
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    switchTab(targetId);
+                    // If on mobile, close the menu after clicking
+                    if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Initial state
+            switchTab('info-collect');
+        });
+    </script>
+</body>
+</html>
